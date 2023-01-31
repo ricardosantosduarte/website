@@ -23,12 +23,14 @@ const Header: React.FC = () => {
             url: 'https://www.linkedin.com/in/ricardo-santos-duarte/',
             alt: 'linkedin-logo',
             img: <Linkedin />,
+            urlLabel: 'Visit my Linkedin profile!',
         },
         {
             url: 'https://github.com/ricardosantosduarte/',
             alt: 'github-logo',
             img: <Github />,
             fill: state.isDarkMode,
+            urlLabel: 'Visit my Github profile!',
         },
     ];
 
@@ -49,12 +51,6 @@ const Header: React.FC = () => {
                 </Text>
                 <Spacer size={'s'} />
                 <TextWrapper>
-                    <Text
-                        size={'subTitle'}
-                        lineHeight={'custom'}
-                    >
-                        <StyledText>Dark Mode</StyledText>
-                    </Text>
                     <Toggle
                         isPreviouslySelected={state.isDarkMode}
                         onClick={() =>
@@ -62,6 +58,7 @@ const Header: React.FC = () => {
                                 type: ACTION_TYPES.TOGGLE_THEME,
                             })
                         }
+                        label="Dark Mode"
                     />
                 </TextWrapper>
             </HeaderSection>
@@ -83,6 +80,7 @@ const Header: React.FC = () => {
                                     key={social.url}
                                     href={social.url}
                                     target={'_blank'}
+                                    aria-label={social.urlLabel}
                                 >
                                     <SocialIcon
                                         css={{ $$fill: '#fff' }}

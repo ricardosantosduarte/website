@@ -1,4 +1,5 @@
 import { styled } from '~/stitches.config';
+import { Text } from '../text';
 
 const width = '50px';
 const height = '25px';
@@ -9,13 +10,19 @@ const controlEase = 'ease-in';
 const radius = `calc(${height} / 2)`;
 const controlSize = `calc(${height} - ${gutter} * 2)`;
 
+const ToggleWrapper = styled('div', {
+    position: 'relative',
+});
+
 const ToggleLabel = styled('label', {
     display: 'block',
-    position: 'relative',
     paddingLeft: width,
     cursor: 'pointer',
-    fontSize: '22px',
     userSelect: 'none',
+
+    [`&> ${Text}`]: {
+        marginLeft: '0.5rem',
+    },
 });
 
 const ToggleInput = styled('input', {
@@ -56,4 +63,4 @@ const ToggleSpan = styled('span', {
     },
 });
 
-export { ToggleLabel, ToggleInput, ToggleSpan };
+export { ToggleWrapper, ToggleLabel, ToggleInput, ToggleSpan };

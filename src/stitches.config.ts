@@ -9,10 +9,10 @@ const { styled, getCssText, createTheme, globalCss } = createStitches({
     theme: {
         colors: {
             text: 'black',
-            background: '#eee7d7',
-            primary: '#FF5C00',
+            background: '#f2ecdf',
+            primary: '#d20000',
             antBackground: 'white',
-            toggleBall: '#FF5C00',
+            toggleBall: '#d20000',
         },
         fontSizes: {
             title: '2.25em',
