@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                     align="right"
                     color={'highlight'}
                 >
-                    Ricardo
+                    {`<Ricardo>`}
                 </Text>
                 <Spacer size={'xs'} />
                 <MoreInfoWrapper>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                                 </SocialLink>
                             ))}
                         </SocialsWrapper>
-                        <Text size={'subTitle'}>Santos Duarte</Text>
+                        <Text size={'subTitle'}>{`</Santos Duarte>`}</Text>
                     </MoreInfo>
                 </MoreInfoWrapper>
             </HeaderSection>

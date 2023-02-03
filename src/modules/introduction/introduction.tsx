@@ -18,8 +18,9 @@ const Introduction = () => {
                     Ricardo.
                 </Text>
             </Text>
+
             <Text>
-                I’m an eager {currentAge} year old guy that likes{' '}
+                I’m a {currentAge} year old guy that likes{' '}
                 <Text
                     as={'span'}
                     color={'highlight'}
@@ -29,13 +30,14 @@ const Introduction = () => {
                 </Text>{' '}
                 development, simplicity & gaming.
             </Text>
+
             <Text>
                 I strive to build applications that are scalable, simple and
                 easy to work with.
             </Text>
 
             <Text>
-                I am most confortable with{' '}
+                I am especially confortable with{' '}
                 <Text
                     as={'span'}
                     color={'highlight'}
