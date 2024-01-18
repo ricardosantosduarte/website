@@ -12,7 +12,7 @@ export const event = (event: string, options: Record<string, any>) => {
     };
     console.log(customEvent);
 
-    if (window?.dataLayer?.push && customEvent['gtm.uniqueEventId']) {
+    if (window?.dataLayer?.push) {
         window?.dataLayer?.push(customEvent);
     }
 };
