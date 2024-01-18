@@ -77,6 +77,7 @@ const Header: React.FC = () => {
                         <SocialsWrapper>
                             {socials.map((social) => (
                                 <SocialLink
+                                    id={social.alt}
                                     key={social.url}
                                     href={social.url}
                                     target={'_blank'}
