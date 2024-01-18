@@ -19,7 +19,7 @@ const Toggle: React.FC<Props> = ({
     const handleClick = () => {
         setIsSelected(!isSelected);
 
-        event('click', {
+        event('toggleClick', {
             category: 'toggle',
             label: label,
             value: !isSelected,
