@@ -52,6 +52,7 @@ const Header: React.FC = () => {
                 <Spacer size={'s'} />
                 <TextWrapper>
                     <Toggle
+                        eventName="darkModeToggle"
                         isPreviouslySelected={state.isDarkMode}
                         onClick={() =>
                             dispatch({
