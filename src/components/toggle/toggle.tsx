@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ToggleInput, ToggleLabel, ToggleSpan } from './toggle.styles';
 import { Text } from '../text';
+import { event } from '~/utils/ga';
 
 interface Props {
     label: string;
@@ -17,6 +18,13 @@ const Toggle: React.FC<Props> = ({
 
     const handleClick = () => {
         setIsSelected(!isSelected);
+
+        event('click', {
+            category: 'toggle',
+            label: label,
+            value: !isSelected,
+        });
+
         onClick(!isSelected);
     };
 
