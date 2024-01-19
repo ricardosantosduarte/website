@@ -42,7 +42,6 @@ const CookieBanner = () => {
             toggleCookieScript(true);
         } else {
             localStorage.setItem(COOKIE_TOKEN, 'rejected');
-            sendCustomEvent('rejectCookies');
         }
         setShowCookieBanner(false);
         router.reload();
