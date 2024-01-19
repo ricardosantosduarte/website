@@ -5,7 +5,7 @@ interface CustomEventProps {
     [key: string]: any;
 }
 
-const sendCustomEvent = (event: string, options: Record<string, any>) => {
+const sendCustomEvent = (event: string, options?: Record<string, any>) => {
     const areCookiesAccepted =
         localStorage.getItem(COOKIE_TOKEN) === 'accepted';
 

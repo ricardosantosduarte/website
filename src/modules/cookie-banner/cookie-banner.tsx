@@ -7,7 +7,7 @@ import {
 } from './cookie-banner.styles';
 import { Text } from '~/components';
 import Image from 'next/image';
-import { COOKIE_TOKEN } from '~/utils/ga';
+import { COOKIE_TOKEN, sendCustomEvent } from '~/utils/ga';
 import { useRouter } from 'next/router';
 
 const toggleCookieScript = (accepted: boolean) => {
@@ -28,15 +28,6 @@ const toggleCookieScript = (accepted: boolean) => {
         iframe.style.visibility = 'hidden';
         noscript.appendChild(iframe);
         document.body.appendChild(noscript);
-    } else {
-        const script = document.getElementById('google-tag-manager');
-        if (script) {
-            script.remove();
-        }
-        const noscript = document.getElementById('gtm-noscript');
-        if (noscript) {
-            noscript.remove();
-        }
     }
 };
 
@@ -51,6 +42,7 @@ const CookieBanner = () => {
             toggleCookieScript(true);
         } else {
             localStorage.setItem(COOKIE_TOKEN, 'rejected');
+            sendCustomEvent('rejectCookies');
         }
         setShowCookieBanner(false);
         router.reload();
