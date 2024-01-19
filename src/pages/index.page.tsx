@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Spacer, Text, Toggle } from '~/components';
-import { Footer, Header, Introduction } from '~/modules';
+import { CookieBanner, Footer, Header, Introduction } from '~/modules';
 import styles from '~/styles/Home.module.css';
 
 export default function Home() {
@@ -25,6 +25,7 @@ export default function Home() {
                 <Header />
                 <Introduction />
                 <Footer />
+                <CookieBanner />
             </main>
         </>
     );

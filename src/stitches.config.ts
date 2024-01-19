@@ -13,6 +13,7 @@ const { styled, getCssText, createTheme, globalCss } = createStitches({
             primary: '#d20000',
             antBackground: 'white',
             toggleBall: '#d20000',
+            cookieBanner: 'white',
         },
         fontSizes: {
             title: '2.25em',
@@ -42,6 +43,7 @@ const darkTheme = createTheme('dark', {
         primary: '#FF5C00',
         antBackground: '#383838',
         toggleBall: 'black',
+        cookieBanner: '#333',
     },
 });
 
