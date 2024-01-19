@@ -20,15 +20,39 @@ const Introduction = () => {
             </Text>
 
             <Text>
-                I’m a {currentAge} year old guy that likes{' '}
+                I’m a {currentAge} year old guy that likes especially{' '}
                 <Text
                     as={'span'}
                     color={'highlight'}
                     weight={'bold'}
                 >
                     Frontend
-                </Text>{' '}
-                development, simplicity & gaming.
+                </Text>
+                .{' '}
+                <Text
+                    size={'subTitle'}
+                    as={'span'}
+                >
+                    But I can also do some{' '}
+                    <Text
+                        size={'subTitle'}
+                        as={'span'}
+                        color={'highlight'}
+                        weight={'bold'}
+                    >
+                        backend
+                    </Text>{' '}
+                    in{' '}
+                    <Text
+                        size={'subTitle'}
+                        as={'span'}
+                        color={'highlight'}
+                        weight={'bold'}
+                    >
+                        Node.js
+                    </Text>
+                    .
+                </Text>
             </Text>
 
             <Text>
